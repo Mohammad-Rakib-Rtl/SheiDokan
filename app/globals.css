@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { scroll-behavior: auto; }
+body { margin: 0; background: #fbfaf7; color: #171717; }
+::selection { background: #171717; color: #fff; }
+.luxury-ease { transition-timing-function: cubic-bezier(.22,1,.36,1); }
+.reveal-mask { clip-path: inset(0 0 0 0 round 28px); }
+.grid-12 { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); }
+.hover-underline { background-image: linear-gradient(currentColor,currentColor); background-position: 0 100%; background-repeat: no-repeat; background-size: 0% 1px; transition: background-size .45s cubic-bezier(.22,1,.36,1); }
+.hover-underline:hover { background-size: 100% 1px; }
+.skeleton { background: linear-gradient(90deg,#eee9df,#faf8f2,#eee9df); background-size: 200% 100%; animation: shimmer 1.4s infinite; }
+@keyframes shimmer { to { background-position: -200% 0; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; } }
